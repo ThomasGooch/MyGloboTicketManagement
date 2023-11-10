@@ -1,5 +1,8 @@
 ﻿using AutoMapper;
-using MyGloboTicketManagement.Application.Features.Events;
+using MyGloboTicketManagement.Application.Features.Categories.Queries.GetCategoriesList;
+using MyGloboTicketManagement.Application.Features.Categories.Queries.GetCategoriesListWithEvents;
+using MyGloboTicketManagement.Application.Features.Events.Queries.GetEventDetail;
+using MyGloboTicketManagement.Application.Features.Events.Queries.GetEventsList;
 using MyGloboTicketManagement.Domain.Entities;
 
 namespace MyGloboTicketManagement.Application.Profiles
@@ -11,6 +14,8 @@ namespace MyGloboTicketManagement.Application.Profiles
             CreateMap<Event, EventListVm>().ReverseMap();
             CreateMap<Event, EventDetailVm>().ReverseMap();
             CreateMap<Category, CategoryDto>();
+            CreateMap<Category, CategoryListVm>();
+            CreateMap<Category, CategoryEventListVm>();
         }
     }
 }

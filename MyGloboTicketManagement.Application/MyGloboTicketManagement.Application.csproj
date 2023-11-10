@@ -11,8 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Catergories\" />
-    <Folder Include="Features\Orders\" />
+    <Folder Include="Features\Events\Commands\CreateEvent\" />
   </ItemGroup>
 
   <ItemGroup>

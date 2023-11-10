@@ -3,7 +3,7 @@ using MediatR;
 using MyGloboTicketManagement.Application.Contracts.Persistence;
 using MyGloboTicketManagement.Domain.Entities;
 
-namespace MyGloboTicketManagement.Application.Features.Events
+namespace MyGloboTicketManagement.Application.Features.Events.Queries.GetEventDetail
 {
     public class GetEventDetailQueryHandler : IRequestHandler<GetEventDetailQuery, EventDetailVm>
     {
@@ -22,7 +22,7 @@ namespace MyGloboTicketManagement.Application.Features.Events
         {
             var @event = await _eventRepository.GetByIdAsync(request.Id);
             var eventDetailDto = _mapper.Map<EventDetailVm>(@event);
-            
+
             var category = await _categoryRepository.GetByIdAsync(@event.CategoryId);
 
             //if (category == null)
