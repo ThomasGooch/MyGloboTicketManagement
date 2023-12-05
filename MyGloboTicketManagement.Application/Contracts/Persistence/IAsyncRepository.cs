@@ -7,6 +7,6 @@ namespace MyGloboTicketManagement.Application.Contracts.Persistence
         Task<IReadOnlyList<T>> ListAllAsync();
         Task<T> AddAsync(T entity);
         Task UpdateAsync(T entity);
-        Task<T> DeleteAsync(T entity);
+        Task DeleteAsync(T entity);
     }
 }
