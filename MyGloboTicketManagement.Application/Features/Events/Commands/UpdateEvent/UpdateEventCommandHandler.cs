@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using MediatR;
 using MyGloboTicketManagement.Application.Contracts.Persistence;
+using MyGloboTicketManagement.Application.Exceptions;
 using MyGloboTicketManagement.Domain.Entities;
 
 namespace MyGloboTicketManagement.Application.Features.Events.Commands.UpdateEvent
@@ -35,7 +36,7 @@ namespace MyGloboTicketManagement.Application.Features.Events.Commands.UpdateEve
 
             await _eventRepository.UpdateAsync(eventToUpdate);
 
-            
+
         }
     }
 }
